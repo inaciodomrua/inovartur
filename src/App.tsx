@@ -21,11 +21,22 @@ function App() {
       <main className="container mx-auto p-4">
         <section className="mb-10">
           <div className="relative h-96 rounded-lg overflow-hidden mb-4">
-            <img 
-              src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1080&auto=format&fit=crop" 
-              alt="Porto Seguro" 
-              className="w-full h-full object-cover"
-            />
+            {/* Substituindo a imagem por um vídeo */}
+            <video 
+              autoPlay 
+              muted 
+              loop 
+              playsInline
+              className="w-full h-full object-cover absolute inset-0"
+            >
+              <source src="/videos/porto-seguro-beach.mp4" type="video/mp4" />
+              {/* Fallback para imagem caso o vídeo não carregue */}
+              <img 
+                src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1080&auto=format&fit=crop" 
+                alt="Porto Seguro" 
+                className="w-full h-full object-cover"
+              />
+            </video>
             <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40">
               <div className="text-center text-white p-4">
                 <h2 className="text-4xl font-bold mb-2">Descubra Porto Seguro</h2>
