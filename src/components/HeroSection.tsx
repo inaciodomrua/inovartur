@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { format } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
@@ -9,6 +8,7 @@ import { MessageCircle, CalendarIcon, Umbrella, Sun, Waves } from "lucide-react"
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
 import { useIsMobile } from "@/hooks/use-mobile";
+import YoutubeBackgroundVideo from "@/components/gallery/YoutubeBackgroundVideo";
 
 const HeroSection = () => {
   const [checkInDate, setCheckInDate] = useState<Date | undefined>(undefined);
@@ -40,19 +40,8 @@ const HeroSection = () => {
 
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Slider/Images */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-deepblue/40 to-deepblue/80 z-10"></div>
-        
-        {/* Using the new uploaded resort images with adjusted mobile positioning */}
-        <div className="relative w-full h-full">
-          <img 
-            src="/lovable-uploads/903b453b-e880-4f82-826f-498624668fba.png" 
-            alt="Portobello Park Aquático" 
-            className="w-full h-full object-cover md:object-center object-[80%_center]"
-          />
-        </div>
-      </div>
+      {/* YouTube Background Video with light blue overlay */}
+      <YoutubeBackgroundVideo videoId="MRGGro0BWFU" overlayColor="bg-turquoise/30" />
 
       <div className="relative z-20 text-center px-4 max-w-4xl mx-auto">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 drop-shadow-lg leading-tight">
