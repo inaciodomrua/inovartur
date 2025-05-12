@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { format } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
@@ -41,11 +40,8 @@ const HeroSection = () => {
 
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* YouTube Background Video with optimized settings for mobile */}
-      <YoutubeBackgroundVideo 
-        videoId="MRGGro0BWFU" 
-        mobileFallbackImage="/lovable-uploads/f37f7e5f-57e0-435d-a98f-9a1a7dae46ed.png" 
-      />
+      {/* YouTube Background Video with darker blue overlay (using default 70% opacity) */}
+      <YoutubeBackgroundVideo videoId="MRGGro0BWFU" />
 
       <div className="relative z-20 text-center px-4 max-w-4xl mx-auto">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 drop-shadow-lg leading-tight">
@@ -64,7 +60,7 @@ const HeroSection = () => {
           Avaliado por <span className="font-bold">+500</span> hóspedes
         </p>
         
-        {/* Date Picker Filter - Enhanced Mobile Optimization */}
+        {/* Date Picker Filter - Mobile Optimized */}
         <div className="bg-white/10 backdrop-blur-md rounded-lg p-3 sm:p-4 mt-4 sm:mt-6 max-w-md mx-auto">
           <div className={`${isMobile ? 'space-y-3' : 'grid grid-cols-2 gap-4'} mb-3 sm:mb-4`}>
             {/* Check-in Date */}
@@ -87,7 +83,7 @@ const HeroSection = () => {
                     )}
                   </Button>
                 </PopoverTrigger>
-                <PopoverContent className={`w-auto p-0 bg-white ${isMobile ? 'max-w-[calc(100vw-2rem)]' : ''}`}>
+                <PopoverContent className="w-auto p-0 bg-white">
                   <Calendar
                     mode="single"
                     selected={checkInDate}
@@ -121,7 +117,7 @@ const HeroSection = () => {
                     )}
                   </Button>
                 </PopoverTrigger>
-                <PopoverContent className={`w-auto p-0 bg-white ${isMobile ? 'max-w-[calc(100vw-2rem)]' : ''}`}>
+                <PopoverContent className="w-auto p-0 bg-white">
                   <Calendar
                     mode="single"
                     selected={checkOutDate}
