@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import GalleryHeader from '@/components/gallery/GalleryHeader';
 import GalleryTabContent from '@/components/gallery/GalleryTabContent';
 import ImageCarouselDialog from '@/components/gallery/ImageCarouselDialog';
+import YoutubeVideo from '@/components/gallery/YoutubeVideo';
 import { galleryData } from '@/components/gallery/galleryData';
 
 const Gallery = () => {
@@ -31,6 +32,12 @@ const Gallery = () => {
       <GalleryHeader />
       
       <div className="container mx-auto px-4 py-12 md:py-16 min-h-screen">
+        {/* YouTube Video Section */}
+        <div className="mb-12">
+          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">Conheça Nosso Resort em Vídeo</h2>
+          <YoutubeVideo videoId="MRGGro0BWFU" title="Tour pelo PortoBello Park" />
+        </div>
+        
         <Tabs defaultValue="portoBello" className="w-full" onValueChange={setSelectedTab}>
           <TabsList className="grid w-full grid-cols-3 mb-8">
             <TabsTrigger value="portoBello" className="text-sm md:text-base">PortoBello Park</TabsTrigger>

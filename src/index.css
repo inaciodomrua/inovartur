@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
@@ -142,6 +141,44 @@
 
   .amenity-card {
     @apply bg-white p-4 md:p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl border-t-4 border-turquoise hover:-translate-y-2;
+  }
+
+  /* YouTube video customization */
+  .youtube-container {
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .youtube-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 80%, rgba(0,0,0,0.3) 100%);
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .youtube-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 80px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    z-index: 3;
+    border-top-left-radius: 8px;
+  }
+
+  .youtube-custom-overlay {
+    pointer-events: none;
+    z-index: 2;
   }
 
   /* Mobile optimizations */
