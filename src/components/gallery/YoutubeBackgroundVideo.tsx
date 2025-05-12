@@ -8,12 +8,12 @@ interface YoutubeBackgroundVideoProps {
 
 const YoutubeBackgroundVideo = ({ 
   videoId, 
-  overlayColor = "bg-turquoise/40" 
+  overlayColor = "bg-turquoise/70" 
 }: YoutubeBackgroundVideoProps) => {
   return (
     <div className="absolute inset-0 w-full h-full overflow-hidden z-0">
       {/* Video Overlay with specified color */}
-      <div className={`absolute inset-0 z-10 ${overlayColor}`}></div>
+      <div className={`absolute inset-0 z-10 ${overlayColor}`} style={{ backgroundColor: 'rgba(10, 160, 180, 0.7)' }}></div>
       
       {/* YouTube iframe with parameters for autoplay, mute, loop, no controls */}
       <iframe
