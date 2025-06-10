@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { useIsMobile } from '@/hooks/use-mobile';
@@ -55,7 +54,6 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           <div className="flex items-center">
             <div className="flex items-center">
-              {/* Logo Image - updating the logo path */}
               <Link to="/">
                 <img 
                   src="/lovable-uploads/8620f06c-0844-44b1-8beb-b3c7467f69b2.png" 
@@ -66,9 +64,7 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-4 lg:space-x-8">
-            {/* Social Media Icons */}
             <div className="flex space-x-3 mr-2">
               <a href="https://www.facebook.com/inovartur" 
                 className={`transition-colors duration-300 hover:text-coral ${isScrolled ? 'text-gray-700' : 'text-white'}`} 
@@ -84,7 +80,6 @@ const Navbar = () => {
               </a>
             </div>
             
-            {/* Home page section links */}
             <Link 
               to="/"
               className={`capitalize font-medium transition-colors duration-300 hover:text-coral text-sm lg:text-base ${
@@ -108,7 +103,6 @@ const Navbar = () => {
               </button>
             ))}
             
-            {/* Gallery page link */}
             <Link 
               to="/gallery"
               className={`capitalize font-medium transition-colors duration-300 hover:text-coral text-sm lg:text-base ${
@@ -118,14 +112,13 @@ const Navbar = () => {
               Galeria
             </Link>
 
-            {/* Travel Insurance Button */}
             <Button 
               onClick={handleTravelInsurance}
               variant="outline"
-              className={`transition-all duration-300 hover:scale-105 text-xs lg:text-sm px-3 py-1.5 border-2 flex items-center gap-1 ${
+              className={`transition-all duration-300 hover:scale-105 text-xs lg:text-sm px-3 py-1.5 border-2 flex items-center gap-1 backdrop-blur-sm font-semibold ${
                 isScrolled 
-                  ? 'border-turquoise text-turquoise hover:bg-turquoise hover:text-white' 
-                  : 'border-white text-white hover:bg-white hover:text-turquoise'
+                  ? 'border-turquoise/80 text-turquoise bg-white/20 hover:bg-turquoise hover:text-white hover:border-turquoise' 
+                  : 'border-white/80 text-white bg-white/20 hover:bg-white/30 hover:text-white hover:border-white'
               }`}
             >
               <Shield className="w-3 h-3" />
@@ -140,9 +133,7 @@ const Navbar = () => {
             </Button>
           </nav>
 
-          {/* Mobile menu button */}
           <div className="md:hidden flex items-center">
-            {/* Social Media Icons for Mobile */}
             <div className="flex space-x-3 mr-4">
               <a href="https://www.facebook.com/inovartur" 
                 className={`transition-colors duration-300 hover:text-coral ${isScrolled ? 'text-deepblue' : 'text-white'}`} 
@@ -180,7 +171,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Navigation */}
       <div
         className={`md:hidden absolute w-full bg-white shadow-lg transition-all duration-300 ${
           isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
@@ -215,10 +205,9 @@ const Navbar = () => {
             Galeria
           </Link>
 
-          {/* Travel Insurance Button for Mobile */}
           <button
             onClick={handleTravelInsurance}
-            className="block w-full text-left px-3 py-1.5 text-turquoise hover:bg-turquoise/10 hover:text-turquoise rounded-md text-sm font-medium flex items-center gap-2"
+            className="block w-full text-left px-3 py-1.5 text-turquoise hover:bg-turquoise/20 hover:text-turquoise rounded-md text-sm font-semibold flex items-center gap-2 bg-turquoise/10"
           >
             <Shield className="w-4 h-4" />
             Seguro Viagem
