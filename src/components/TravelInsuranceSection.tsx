@@ -59,7 +59,7 @@ const TravelInsuranceSection = () => {
                 <Plane className="w-10 h-10 text-white" />
               </div>
               <img 
-                src="/lovable-uploads/f37f7e5f-57e0-435d-a98f-9a1a7dae46ed.png" 
+                src="/lovable-uploads/9d4de133-da5b-4371-90db-316e9f7c4289.png" 
                 alt="Seguro Viagem - Proteção completa para sua viagem" 
                 className="rounded-lg shadow-xl border-4 border-white w-full object-cover h-80"
               />
