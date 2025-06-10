@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { useIsMobile } from '@/hooks/use-mobile';
-import { Facebook, Instagram } from 'lucide-react';
+import { Facebook, Instagram, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
@@ -35,8 +35,12 @@ const Navbar = () => {
   };
   
   const handleWhatsAppContact = () => {
-    const whatsappUrl = "https://wa.me/556181815737?text=Ol%C3%A1,%20vim%20do%20site.%0AQuero%20conhecer%20as%20hospedagens%20de%20voc%C3%AAs";
+    const whatsappUrl = "https://wa.me/5561999359552?text=Ol%C3%A1,%20vim%20do%20site.%0AQuero%20conhecer%20as%20hospedagens%20de%20voc%C3%AAs";
     window.open(whatsappUrl, '_blank');
+  };
+
+  const handleTravelInsurance = () => {
+    window.open('https://portal.sulamericaseguros.com.br/seguroviagem?idLink=CSCHNFA', '_blank');
   };
 
   return (
@@ -113,6 +117,20 @@ const Navbar = () => {
             >
               Galeria
             </Link>
+
+            {/* Travel Insurance Button */}
+            <Button 
+              onClick={handleTravelInsurance}
+              variant="outline"
+              className={`transition-all duration-300 hover:scale-105 text-xs lg:text-sm px-3 py-1.5 border-2 flex items-center gap-1 ${
+                isScrolled 
+                  ? 'border-turquoise text-turquoise hover:bg-turquoise hover:text-white' 
+                  : 'border-white text-white hover:bg-white hover:text-turquoise'
+              }`}
+            >
+              <Shield className="w-3 h-3" />
+              Seguro Viagem
+            </Button>
             
             <Button 
               onClick={handleWhatsAppContact} 
@@ -196,6 +214,15 @@ const Navbar = () => {
           >
             Galeria
           </Link>
+
+          {/* Travel Insurance Button for Mobile */}
+          <button
+            onClick={handleTravelInsurance}
+            className="block w-full text-left px-3 py-1.5 text-turquoise hover:bg-turquoise/10 hover:text-turquoise rounded-md text-sm font-medium flex items-center gap-2"
+          >
+            <Shield className="w-4 h-4" />
+            Seguro Viagem
+          </button>
           
           <div className="pt-1">
             <Button 
