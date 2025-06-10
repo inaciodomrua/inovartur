@@ -23,6 +23,11 @@ const FeatureCard = ({ title, description, icon: Icon, color, onContactClick }: 
   // Use the color from the map, or fall back to a default
   const bgColorClass = colorMap[color] || `bg-${color}`;
   
+  const handleWhatsAppContact = () => {
+    const whatsappUrl = "https://wa.me/5561999359552?text=Ol%C3%A1,%20vim%20do%20site.%0AQuero%20conhecer%20as%20hospedagens%20de%20voc%C3%AAs";
+    window.open(whatsappUrl, '_blank');
+  };
+  
   return (
     <div className={`rounded-xl overflow-hidden shadow-lg bg-gradient-to-br from-${color}/20 to-${color}/5 p-6`}>
       <div className="flex justify-center mb-4 md:mb-6">
@@ -37,7 +42,7 @@ const FeatureCard = ({ title, description, icon: Icon, color, onContactClick }: 
       <div className="mt-4 md:mt-6 flex justify-center">
         <button 
           className="bg-green-500 hover:bg-green-600 text-white px-3 py-1.5 md:px-4 md:py-2 rounded-md flex items-center gap-1 transition-all text-xs md:text-sm"
-          onClick={onContactClick}
+          onClick={handleWhatsAppContact}
         >
           <MessageCircle className="w-3 h-3 md:w-4 md:h-4" />
           <span>FAZER UM ORÇAMENTO</span>

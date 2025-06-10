@@ -20,7 +20,7 @@ const CtaButton = () => {
   }, []);
 
   const handleWhatsAppContact = () => {
-    const whatsappUrl = "https://wa.me/556181815737?text=Ol%C3%A1,%20vim%20do%20site.%0AQuero%20conhecer%20as%20hospedagens%20de%20voc%C3%AAs";
+    const whatsappUrl = "https://wa.me/5561999359552?text=Ol%C3%A1,%20vim%20do%20site.%0AQuero%20conhecer%20as%20hospedagens%20de%20voc%C3%AAs";
     window.open(whatsappUrl, '_blank');
   };
 

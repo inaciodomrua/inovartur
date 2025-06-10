@@ -6,6 +6,11 @@ interface CallToActionProps {
 }
 
 const CallToAction = ({ onContactClick }: CallToActionProps) => {
+  const handleWhatsAppContact = () => {
+    const whatsappUrl = "https://wa.me/5561999359552?text=Ol%C3%A1,%20vim%20do%20site.%0AQuero%20conhecer%20as%20hospedagens%20de%20voc%C3%AAs";
+    window.open(whatsappUrl, '_blank');
+  };
+
   return (
     <div className="mt-12 md:mt-16 bg-gradient-to-r from-coral to-vibrantorange rounded-xl p-6 md:p-10 text-white text-center max-w-4xl mx-auto shadow-xl fade-in-section">
       <h3 className="text-xl md:text-3xl font-bold mb-3 md:mb-4">Venha Viver Essa Experiência!</h3>
@@ -14,7 +19,7 @@ const CallToAction = ({ onContactClick }: CallToActionProps) => {
       </p>
       <button 
         className="bg-white text-coral hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 font-medium py-2 px-6 md:py-3 md:px-8 rounded-full shadow-lg text-sm md:text-base"
-        onClick={onContactClick}
+        onClick={handleWhatsAppContact}
       >
         Fale Conosco
       </button>

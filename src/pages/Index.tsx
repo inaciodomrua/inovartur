@@ -1,10 +1,10 @@
-
 import React, { useEffect } from 'react';
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
 import GallerySection from '@/components/GallerySection';
 import LocationSection from '@/components/LocationSection';
 import TestimonialSection from '@/components/TestimonialSection';
+import TravelInsuranceSection from '@/components/TravelInsuranceSection';
 import CertificationSection from '@/components/CertificationSection';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -79,7 +79,10 @@ const Index = () => {
       {/* Location Section */}
       <LocationSection />
       
-      {/* Certification Section - New section added before Footer */}
+      {/* Travel Insurance Section - New section added before Certification */}
+      <TravelInsuranceSection />
+      
+      {/* Certification Section */}
       <CertificationSection />
       
       {/* Footer */}

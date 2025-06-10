@@ -34,7 +34,7 @@ const HeroSection = () => {
     const message = `Olá, vim do site.\nQuero conhecer as hospedagens de vocês para o período de ${formattedCheckIn} até ${formattedCheckOut}`;
     const encodedMessage = encodeURIComponent(message);
     
-    const whatsappUrl = `https://wa.me/556181815737?text=${encodedMessage}`;
+    const whatsappUrl = `https://wa.me/5561999359552?text=${encodedMessage}`;
     window.open(whatsappUrl, '_blank');
   };
 
